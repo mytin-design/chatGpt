@@ -1,0 +1,330 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #444;
+}
+#chatroot {
+    display: flex;
+}
+
+.chatrecords {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    padding: .5pc;
+    background-color: #111;
+    color: white;
+    overflow: scroll;
+}
+
+.starterbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5pc;
+    background-color: #222;
+    border-radius: 8px;
+}
+.newchat {
+    display: flex;
+    align-items: center;
+    gap: .5pc;
+
+}
+
+.writeicon {
+    width: 1pc;
+    height: 1pc;
+    border-radius: 100%;
+}
+
+
+.newchatimg {
+    height: 2pc;
+    width: 2pc;
+    border-radius: 100%;
+}
+
+
+/* start list of chat styles */
+#all_list {
+    display: flex;
+    flex-flow: column;
+    gap: 1pc;
+    padding: .5pc;
+    margin-bottom: 10pc;
+}
+
+.listofchats > li {
+    list-style-type: none;
+}
+.listheader {
+    color: #888;
+    font-size: small;
+    font-weight: bold;
+}
+
+/* footer info */
+
+.footerdeta {
+    position: fixed;
+    top: 83%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5pc;
+    padding: .5pc;
+    background: #222;
+}
+
+.fooflexer {
+    display: flex;
+    align-items: center;
+    gap: .5pc;
+    background-color: #222;
+    padding: .5pc;
+    border-radius: .8pc;
+    font-size: small;
+}
+
+.fooflexer:hover {
+    background-color: #333;
+}
+
+.upgradetitle > .thisuser {
+    color: #fff;
+}
+
+
+.upgradeinfo > span {
+    display: block;
+}
+
+
+.upgradetitle {
+    font-weight: bold;
+}
+
+.footexter, .upgradetxt {
+    font-size: smaller;
+}
+
+.foochatimg {
+    height: 1.5pc;
+    width: 1.5pc;
+    border-radius: 100%;
+}
+
+/* chats box*/
+
+.versionbox {
+    padding: .5pc;
+}
+.chatstarter {
+    display: flex;
+    padding: 1pc;
+}
+
+.ver_button {
+    width: 10pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1pc;
+    height: 2.5pc;
+    text-align: center;
+    color: #fff;
+    font-weight: 800;
+    padding: .5pc;
+    background-color: #555;
+    border-radius: .8pc;
+}
+
+
+.ver_button:hover {
+    background-color: #666;
+}
+
+.verbox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1pc;
+    padding: .5pc;
+    background-color: #222222;
+    border-radius: .8pc;
+    z-index: 23;
+    display: none;
+}
+
+.versionbox:hover .verbox {
+    display: block;
+}
+
+.verboxtype {
+    display: flex;
+    align-items: center;
+    gap: .5pc;
+    width: auto;
+    padding: .5pc;
+    background-color: #333;
+    border-radius: .8pc;
+    font-size: smaller;
+    color: #fff;
+
+}
+
+.verboxtype:hover {
+    background-color: #444;
+}
+
+.vertypeimg {
+    width: 1pc;
+    height: 1pc;
+    border-radius: 100%;
+} 
+
+.chatgptvertitle {
+    font-weight: bold;
+}
+
+.chatverinfo {
+    color: #ddd;
+}
+
+.innerverboxtype {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15pc;
+    padding: .5pc;
+}
+
+#upgradeGpt {
+    height: 2.5pc;
+    width: 100%;
+    background-color: rgb(148, 83, 161);
+    color: white;
+    border: none;
+    border-radius: .8pc;
+    font-size: large;
+}
+
+#upgradeGpt:hover {
+    background-color: rgb(120, 64, 131);
+}
+
+/* chats hosting page */
+
+.chathoster {
+    display: flex;
+    flex-flow: column;  
+    justify-content: space-between;
+    padding: .5pc;
+    width: 100%;
+}
+
+.chathostinner {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    border: .1pc solid red;
+}
+
+.inhoster {
+    margin: 5pc auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5pc;
+    color: white;
+}
+
+
+.demochatsbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 1pc;
+}
+
+.demobox {
+    border: .1pc solid #666;
+    color: white;
+    padding: .5pc;
+    cursor: pointer;
+}
+
+
+.demobox:hover {
+    background-color: #555;
+
+}
+
+.iconhoster {
+    height: 2.5pc;
+    width: 2.5pc;
+    border-radius: 100%;
+}
+
+/* chat input stream */
+.chatinputbox {
+    border: .1pc solid #eee;
+}
+
+#chatinputter {
+    height: 2.5pc;
+    width: 100%;
+    border-radius: .8pc;
+    background-color: transparent;
+    outline: none;
+    color: #ddd;
+    padding: 0 1pc;
+}
+
+#chatsubmitter {
+    position: relative;
+    top: -50%;
+    right: -90%;
+    height: 2pc;
+    width: 2pc;
+    background-color: transparent;
+    border-color: #eee;
+    border-radius: .8px;
+}
+
+.impinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5pc;
+}
+
+.impinfocenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.foohelperbtn {
+    height: 1.2pc;
+    width: 1.2pc;
+    border-radius: 100%;
+    background-color: #555;
+    color: #fff;
+}
+
+.infotext {
+    color: #eee;
+    font-size: small;
+}

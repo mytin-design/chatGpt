@@ -6,39 +6,145 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="chatroot">
+    <div id="chatroot">
         <!--Two main containers-->
         <div class="chatrecords">
-            <div class="starterbtn"></div>
-            <ul class="listofchats">
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
-                <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+            
+            <div id="all_list">
+                <div class="starterbtn">
+                    <div class="newchat">
+                        <img src="./images/bossbaby.JPG" width="20" alt="newchatimg" class="newchatimg">
+                        <p class="newchatname">New chat</p>
+                    </div>
+                    <div class="witericon">
+                        <img src="./images/bossbaby.JPG" width="20" class="writeicon" alt="witeicon">
+                    </div>
+                </div>
+                <div class="listbox listbox1 listbox_date">
+                    <p class="listheader">Yesterday</p>
+                    <ul class="listofchats">
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        
+                    </ul>
+                </div>
 
-            </ul>
+                <div class="listbox listbox1 listbox_date">
+                    <p class="listheader">Previous 7 days</p>
+                    <ul class="listofchats">
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="listbox listbox1 listbox_date">
+                    <p class="listheader">Previous 30 days</p>
+                    <ul class="listofchats">
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        <li class="thischat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, blanditiis.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="footerdeta">
+                <div class="upgradebox fooflexer">
+                    <img src="./images/bossbaby.JPG" width="20" class="foochatimg" alt="Upgrade">
+                    <div class="upgradeinfo">
+                        <span class="upgradetitle">Upgrade</span>
+                        <span class="upgradetxt">Get GPT 4 DALL'E, and more.</span>
+
+                    </div>
+                </div>
+                <div class="userbox fooflexer">
+                    <img src="./images/bossbaby.JPG" width="20" class="foochatimg" alt="Upgrade">
+                    <div class="upgradeinfo">
+                        <span class="upgradetitle footexter"><a href="#" class="thisuser">Denis Mytin </a></span>
+
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="chatstarter">
             <div class="versionbox">
-                <select name="versionchat" id="chatVersion">
-                    <option value="Version 3.5">ChatGPT 3.5</option>
-                    <option value="Version 4">ChatGPT 4</option>
-
-                </select>
+                <div class="ver_button">
+                <p class="chatver">ChatGPT <span class="ver_type">3.5</span></p>
+                <span class="arrow_chatdown">&downarrow;</span>
+                </div>
+                <!--The box below appears on hover-->
+                <div class="verbox">
+                    <div class="verboxtype chatgpt3">
+                        <img src="./images/bossbaby.JPG" width="10" class="vertypeimg" alt="vertype">
+                        <div class="innerverboxtype">
+                            <div class="inner_innerverinfobox">
+                                <p class="chatgptvertitle">ChatGPT 3.5</p>                            
+                            <p class="chatverinfo">Great everyday tasks.</p>
+                            </div>
+                            <div class="ver_selected">
+                                <input type="checkbox"  id="ver_selected" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="verboxtype chatgpt4">
+                        <img src="./images/bossbaby.JPG" class="vertypeimg" width="10" alt="vertype">
+                        <div class="innerverboxtype">
+                            <div class="inner_innerverinfobox">
+                                <p class="chatgptvertitle">ChatGPT-4</p>                            
+                            <p class="chatverinfo">Our most smartest and most capable model. <br> Includes DALL'E, browsing and more.</p>
+                            </div>
+                            <!--If the chat gpt 3 is selected, this should not be displayed-->
+                            <div class="ver_selected">
+                                <input type="checkbox"  id="ver_selected" >
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button id="upgradeGpt">Ugrade to Plus</button>
+                </div>
             </div>
             <div class="chathoster">
                 <div class="chathostinner">
+                    <div class="inhoster">
+                        <img src="./images/bossbaby.JPG" width="50" alt="Icon" class="iconhoster">
+                        <p class="helphoster">How can I help you today?</p>
+                    </div>
 
+                    <div class="demochatsbox">
+                        <div class="demobox">
+                            <p class="demotitile">Give me ideas</p>
+                            <p class="demotext">About how to plan my New Year's resolutions.</p>
+                        </div>
+                        <div class="demobox">
+                            <p class="demotitile">Suggest fun activities</p>
+                            <p class="demotext">to do indoors with my high energy dog.</p>
+                        </div><div class="demobox">
+                            <p class="demotitile">Design a database schema</p>
+                            <p class="demotext">for an online merch store.</p>
+                        </div><div class="demobox">
+                            <p class="demotitile">Explain this code:</p>
+                            <p class="demotext">function initiatSystem(true) {system iniated;}</p>
+                        </div>
+                    </div>
+                
                 </div>
                 <div class="chatinputbox">
                      
-                    <input type="text" id="chatinputter">
-                    <button id="chatsubmitter"></button>
+                    <input type="text" id="chatinputter" placeholder="Message ChatGPT...">
+                    <button id="chatsubmitter">&UpArrow;</button>
+                </div>
+                <div class="impinfo">
+                    <div class="impinfocenter">
+                        <p class="infotext">ChatGPT can make mistakes. Consider checking important information.</p>
+                    </div>
+                    <div class="foohelperbox">
+                        <button class="foohelperbtn">&quest;</button>
+                    </div>
                 </div>
         
             </div>
