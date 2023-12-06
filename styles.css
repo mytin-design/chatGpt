@@ -5,20 +5,37 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-body {
-    background-color: #444;
+:root {
+    --dark-gray: #202123;
+    --main-back: #343541;
+    --daker: #050509;
 }
-#chatroot {
-    display: flex;
+body {
+    background-color: var(--main-back);
 }
 
+/* Main container holding .chatrecords and .chatstarter 
+Essentially this is the container that should define 
+a. the width, height of the application.
+b. height of the application.
+c.
+*/
+
+#chatroot {
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+    grid-auto-rows: auto;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-back);
+}
+
+/* start chatrecords styles 
+Holds all styles of the side navigation */
+
 .chatrecords {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30%;
     padding: .5pc;
-    background-color: #111;
+    background-color: #0f0f0f;
     color: white;
     overflow: scroll;
 }
@@ -76,26 +93,29 @@ body {
     position: fixed;
     top: 83%;
     left: 0;
+    width: 20%;
     display: flex;
     flex-direction: column;
     gap: .5pc;
     padding: .5pc;
-    background: #222;
+    background: #000;
 }
+
 
 .fooflexer {
     display: flex;
     align-items: center;
     gap: .5pc;
-    background-color: #222;
+    background-color: #111;
     padding: .5pc;
     border-radius: .8pc;
     font-size: small;
 }
 
 .fooflexer:hover {
-    background-color: #333;
+    background-color: #222;
 }
+
 
 .upgradetitle > .thisuser {
     color: #fff;
@@ -121,16 +141,30 @@ body {
     border-radius: 100%;
 }
 
-/* chats box*/
+/* END IF - of chatrecords */
 
-.versionbox {
-    padding: .5pc;
-}
+/* START of chatstarter styles 
+The container holds two main containers
+a. versionbox 
+b. chathoster
+
+*/
+
+/* First container - a space that runs from top to bottom 
+- it contains a button that on onclick shows two versions of the 
+application */
+
 .chatstarter {
     display: flex;
-    padding: 1pc;
+    gap: .5pc;
+    padding: .5pc;
 }
 
+/* start of version box */
+.versionbox {
+    width: 30%;
+    padding: .5pc;
+}
 .ver_button {
     width: 10pc;
     display: flex;
@@ -142,13 +176,14 @@ body {
     color: #fff;
     font-weight: 800;
     padding: .5pc;
-    background-color: #555;
+    background-color: #444;
     border-radius: .8pc;
+    cursor: default;
 }
 
 
 .ver_button:hover {
-    background-color: #666;
+    background-color: #555;
 }
 
 .verbox {
@@ -163,10 +198,12 @@ body {
     display: none;
 }
 
+/* Use this, when you need the function as hover 
 .versionbox:hover .verbox {
     display: block;
 }
 
+*/
 .verboxtype {
     display: flex;
     align-items: center;
@@ -177,6 +214,7 @@ body {
     border-radius: .8pc;
     font-size: smaller;
     color: #fff;
+    cursor: pointer;
 
 }
 
@@ -220,14 +258,15 @@ body {
     background-color: rgb(120, 64, 131);
 }
 
-/* chats hosting page */
+/* Start MAIN chats hosting page
+ Holds the chats input stream area*/
 
 .chathoster {
     display: flex;
     flex-flow: column;  
     justify-content: space-between;
     padding: .5pc;
-    width: 100%;
+
 }
 
 .chathostinner {
@@ -235,7 +274,6 @@ body {
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    border: .1pc solid red;
 }
 
 .inhoster {
@@ -244,6 +282,7 @@ body {
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    gap: .5pc;
     padding: .5pc;
     color: white;
 }
@@ -275,10 +314,16 @@ body {
     border-radius: 100%;
 }
 
-/* chat input stream */
-.chatinputbox {
-    border: .1pc solid #eee;
+.chatInnerStream {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    gap: 1pc;
+    text-align: center;
 }
+
+/* chat input stream */
+
 
 #chatinputter {
     height: 2.5pc;
@@ -293,19 +338,21 @@ body {
 #chatsubmitter {
     position: relative;
     top: -50%;
-    right: -90%;
+    right: -45%;
     height: 2pc;
     width: 2pc;
     background-color: transparent;
-    border-color: #eee;
+    border-color: #666;
     border-radius: .8px;
+    color: #fff;
 }
 
 .impinfo {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 .5pc;
+
 }
 
 .impinfocenter {
@@ -317,6 +364,8 @@ body {
 }
 
 .foohelperbtn {
+    position: absolute;
+    right: 3%;
     height: 1.2pc;
     width: 1.2pc;
     border-radius: 100%;

@@ -72,26 +72,26 @@
         </div>
         <div class="chatstarter">
             <div class="versionbox">
-                <div class="ver_button">
+                <div class="ver_button" onclick="openVerbox()">
                 <p class="chatver">ChatGPT <span class="ver_type">3.5</span></p>
                 <span class="arrow_chatdown">&downarrow;</span>
                 </div>
                 <!--The box below appears on hover-->
                 <div class="verbox">
-                    <div class="verboxtype chatgpt3">
+                    <div class="verboxtype chatgpt3" onclick="selectVer3()">
                         <img src="./images/bossbaby.JPG" width="10" class="vertypeimg" alt="vertype">
                         <div class="innerverboxtype">
                             <div class="inner_innerverinfobox">
                                 <p class="chatgptvertitle">ChatGPT 3.5</p>                            
                             <p class="chatverinfo">Great everyday tasks.</p>
                             </div>
-                            <div class="ver_selected">
-                                <input type="checkbox"  id="ver_selected" checked>
+                            <div class="ver_selectedv3">
+                                <input type="checkbox"  id="ver_selectedone" checked>
                             </div>
                         </div>
                     </div>
                     <br>
-                    <div class="verboxtype chatgpt4">
+                    <div class="verboxtype chatgpt4" onclick="selectVer4()">
                         <img src="./images/bossbaby.JPG" class="vertypeimg" width="10" alt="vertype">
                         <div class="innerverboxtype">
                             <div class="inner_innerverinfobox">
@@ -99,8 +99,8 @@
                             <p class="chatverinfo">Our most smartest and most capable model. <br> Includes DALL'E, browsing and more.</p>
                             </div>
                             <!--If the chat gpt 3 is selected, this should not be displayed-->
-                            <div class="ver_selected">
-                                <input type="checkbox"  id="ver_selected" >
+                            <div class="ver_selectedv4" style="display: none;">
+                                <input type="checkbox"  id="ver_selectedtwo" >
                             </div>
                         </div>
                     </div>
@@ -133,17 +133,19 @@
                     </div>
                 
                 </div>
-                <div class="chatinputbox">
+                <div class="chatInnerStream">
+                    <div class="chatinputbox">
                      
-                    <input type="text" id="chatinputter" placeholder="Message ChatGPT...">
-                    <button id="chatsubmitter">&UpArrow;</button>
-                </div>
-                <div class="impinfo">
-                    <div class="impinfocenter">
-                        <p class="infotext">ChatGPT can make mistakes. Consider checking important information.</p>
+                        <input type="text" id="chatinputter" placeholder="Message ChatGPT...">
+                        <button id="chatsubmitter">&UpArrow;</button>
                     </div>
-                    <div class="foohelperbox">
-                        <button class="foohelperbtn">&quest;</button>
+                    <div class="impinfo">
+                        <div class="impinfocenter">
+                            <p class="infotext">ChatGPT can make mistakes. Consider checking important information.</p>
+                        </div>
+                        <div class="foohelperbox">
+                            <button class="foohelperbtn">&quest;</button>
+                        </div>
                     </div>
                 </div>
         
@@ -152,4 +154,5 @@
         </div>
     </div>
 </body>
+<script src="./script.js"></script>
 </html>
